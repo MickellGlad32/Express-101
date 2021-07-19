@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%-include('partials/head') %>
+  </head>
+  <body>
+    <%-include('partials/nav')%>
+    <p>Today's Special is <%= special %></p>
+    <div class="profile">
+        <% if (user) { %>
+          <h3><%= user.name %></h3>
+        <% } else { %>
+          <h3><a href="/login">Login</a></h3>
+        <% } %>
+      </div>
+  </body>
+</html>

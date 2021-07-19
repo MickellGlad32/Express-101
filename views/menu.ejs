@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   <%-include('partials/head') %> 
+  </head>
+  <body>
+    <%-include('partials/nav')%>
+    <% specials.forEach((special) => { %>
+        <h2><%= special.name %></h2>
+        <p><%= special.description %></p>
+        <h3>$<%= special.price %></h3>
+        <a href="/menu/<%= special.id %>">View Item</a>
+   <% }) %> 
+    
+  </body>
+</html>
